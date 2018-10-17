@@ -16,8 +16,6 @@ app.use(require('./middleware/headers'))
 app.use(express.static(__dirname + '/public'))
 console.log(__dirname)
 
-app.get('/', (req, res) => res.render('app'))
-
 app.use('/user', user)
 
 app.use('/org', org)
