@@ -9,9 +9,11 @@ sequelize.sync();
 // sequelize.sync({force: true})
 const bodyParser = require('body-parser')
 
+const cors = require('cors')
+
 app.use(bodyParser.json())
 
-app.use(require('./middleware/headers'))
+app.use(cors())
 
 app.use(express.static(__dirname + '/public'))
 console.log(__dirname)

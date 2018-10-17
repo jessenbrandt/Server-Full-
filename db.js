@@ -1,12 +1,7 @@
 require('dotenv').config();
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize(process.env.DATABASE_URL || `postgresql://postgres:${encodeUriComponent('PostgresHorse46032!')}@localhost/fullStack`, {
+const sequelize = new Sequelize(process.env.DATABASE_URL || `postgresql://postgres:${encodeURIComponent(process.env.PASS)}@localhost/fullStack`, {
     dialect: 'postgres',
-})
-
-const sequelize = new Sequelize(process.env.DATABASE_URL, {
-    // host:'localhost',
-    dialect:'postgres'
 });
 
 sequelize.authenticate().then(
@@ -17,7 +12,6 @@ sequelize.authenticate().then(
         console.log(err);
     }
 );
-
 module.exports = sequelize;
 
 // process.env.NAME, 'postgres'
