@@ -1,0 +1,26 @@
+{
+  "name": "fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "pg": "^7.4.3",
+    "react-http-request": "^1.0.4",
+    "sequelize": "^4.39.0"
+  }
+}
