@@ -27,6 +27,7 @@ router.get('/', (req, res) => (
 ));
 
 router.put('/:id', (req, res) => {
+    console.log(req.body)
     if (!req.errors) {
         Events.update(req.body,{ where: {id: req.params.id}})
         .then(event => res.status(200).json(event))
